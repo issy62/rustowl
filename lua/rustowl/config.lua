@@ -121,6 +121,10 @@ local default_config = {
 
     ---@type string[]
     cmd = { 'rustowl' },
+    
+    capabilities = {
+      offsetEncoding = { "utf-8" },
+    },
 
     ---@type fun():string?
     root_dir = function()
