@@ -124,6 +124,9 @@ local default_config = {
     
     capabilities = {
       offsetEncoding = { "utf-8", "utf-16" },
+      textDocument = {
+          positionEncoding = { "utf-8" }
+        }
     },
     
     ---@type fun():string?
