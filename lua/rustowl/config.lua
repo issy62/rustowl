@@ -85,10 +85,10 @@ local default_config = {
   auto_attach = true,
 
   ---@type boolean
-  auto_enable = false,
+  auto_enable = true,
 
   ---@type number
-  idle_time = 500,
+  idle_time = 350,
 
   ---@type rustowl.HighlightStyles
   highlight_styles = {
@@ -123,12 +123,12 @@ local default_config = {
     cmd = { 'rustowl' },
     
     capabilities = {
-      offsetEncoding = { "utf-8" },
+      offsetEncoding = { "utf-8", "utf-16" },
     },
     
     ---@type fun():string?
-    root_dir = function(filename)
-      return vim.fs.root(filename, { 'Cargo.toml', '.git' })
+    root_dir = function()
+      return vim.fs.root(0, { 'Cargo.toml', '.git' })
     end,
   },
 }
