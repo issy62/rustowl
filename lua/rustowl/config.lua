@@ -123,9 +123,12 @@ local default_config = {
     cmd = { 'rustowl' },
     
     capabilities = {
-      offsetEncoding = { "utf-8" },
-    },
-
+        offsetEncoding = { "utf-8", "utf-16" },
+        textDocument = {
+          positionEncoding = { "utf-8" }
+        }
+      },
+    
     ---@type fun():string?
     root_dir = function()
       return vim.fs.root(0, { 'Cargo.toml', '.git' })
