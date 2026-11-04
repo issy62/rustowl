@@ -123,10 +123,9 @@ local default_config = {
     cmd = { 'rustowl' },
     
     capabilities = {
-      offsetEncoding = { "utf-8", "utf-16" },
-      textDocument = {
-          positionEncoding = { "utf-8" }
-        }
+      general = {
+        positionEncodings = { 'utf-8', 'utf-16' },
+      },
     },
     
     ---@type fun():string?
